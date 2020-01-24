@@ -14,7 +14,7 @@ namespace EasyToGoBq.Forms.Views
 {
     public partial class UcDashbord : UserControl
     {
-        int cmt = 0;
+        //int cmt = 0;
         private int seconde = 0;
         public UcDashbord()
         {
@@ -23,12 +23,15 @@ namespace EasyToGoBq.Forms.Views
 
         public void getDashBord()
         {
+            int recharge = int.Parse(LblTotalRecharge.Text);
+            int opera = int.Parse(LblOperation.Text);
             try
             {
                 LblTotalRecharge.Text = Glossaire.Instance.getTotalRecharge();
                 LblOperation.Text = Glossaire.Instance.getOperation();
                 LblCompte.Text = Glossaire.Instance.getSoldes();
-                LblTranct.Text = Glossaire.Instance.getTransact();
+                //LblTranct.Text = Glossaire.Instance.getTransact();
+                LblTranct.Text = ""+(recharge - opera); 
                 LblCommission.Text = Glossaire.Instance.getCommission();
                 LblTransco.Text = Glossaire.Instance.getAgence("TRANSCO");
                 LblTranskin.Text = Glossaire.Instance.getAgence("TRANSKIN");
@@ -38,6 +41,7 @@ namespace EasyToGoBq.Forms.Views
             }
             catch(Exception ex)
             {
+                
                 timer1.Stop();
                 MessageBox.Show(this, "Une erreur s'est produite lors du chargement des données en temps réel. \n\nL'Application va s'arrêter.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Console.WriteLine("Une erreur s'est produite lors de l'opération : " + ex.Message);
@@ -55,8 +59,9 @@ namespace EasyToGoBq.Forms.Views
         private void UcDashbord_Load(object sender, EventArgs e)
 
         {
-            getDashBord();
             timer1.Start();
+            getDashBord();
+            
 
             //Thread thr = new Thread(mythread);
             //thr.Start();
@@ -91,17 +96,42 @@ namespace EasyToGoBq.Forms.Views
             FormPopUpCompte c = new FormPopUpCompte();
             c.ShowDialog();
         }
-        //private void mythread()
-        //{
 
+        private void panel4_Click(object sender, EventArgs e)
+        {
+            FormPopUpTransact c = new FormPopUpTransact();
+            c.ShowDialog();
+        }
 
-        //    for (;;)
-        //    {
+        private void panel6_Click(object sender, EventArgs e)
+        {
+            FormPopUpTransco tr = new FormPopUpTransco("TRANSCO");
+            tr.ShowDialog();
+        }
 
+        private void panel7_Click(object sender, EventArgs e)
+        {
+            FormPopUpTransco tr = new FormPopUpTransco("TRANSKIN");
+            tr.ShowDialog();
 
-        //        Thread.Sleep(500);
-        //    }
+        }
 
-        //}
+        private void panel8_Click(object sender, EventArgs e)
+        {
+            FormPopUpTransco tr = new FormPopUpTransco("ESPRIT DE VIE");
+            tr.ShowDialog();
+
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+     
     }
 }

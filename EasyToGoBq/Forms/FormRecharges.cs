@@ -29,7 +29,7 @@ namespace EasyToGoBq.Forms
             TxtPrenom.Text = "";
             TxtRecherche.Text = "";
             TxtSolde.Text = "";
-            TxtEmail.Text = "";
+            TxtTel.Text = "";
             TxtAdresse.Text = "";
 
         }
@@ -48,21 +48,34 @@ namespace EasyToGoBq.Forms
             TxtPrenom.Text = GridView.SelectedRows[0].Cells["prenom"].Value.ToString();
             TxtAdresse.Text = GridView.SelectedRows[0].Cells["adresse"].Value.ToString();
             TxtTel.Text = GridView.SelectedRows[0].Cells["tel"].Value.ToString();
-            TxtEmail.Text = GridView.SelectedRows[0].Cells["email"].Value.ToString();
+            //TxtEmail.Text = GridView.SelectedRows[0].Cells["email"].Value.ToString();
             TxtSolde.Text = GridView.SelectedRows[0].Cells["solde"].Value.ToString();
         }
 
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
 
-                    Glossaire.Instance.Recharge(TxtMatricule.Text, TxtSolde.Text);
-                    Glossaire.Instance.GetDatas(GridView, "matricule,nom,postnom,prenom,tel,email,adresse,solde", "agent");
-                    initial();
-                    TxtMatricule.Text = getMatr();
+            if(TxtSolde.Text == "")
+            {
+                TxtSolde.Text = "0";
+                int dispo = int.Parse(LblDispo.Text) + int.Parse(TxtSolde.Text);
 
-                    
+                Glossaire.Instance.Recharge(TxtMatricule.Text, dispo);
+                Glossaire.Instance.GetDatas(GridView, "matricule,nom,postnom,prenom,tel,email,adresse,solde", "agent");
+                initial();
+                TxtMatricule.Text = getMatr();
+            }
+            else
+            {
+                int dispo = int.Parse(LblDispo.Text) + int.Parse(TxtSolde.Text);
+
+                Glossaire.Instance.Recharge(TxtMatricule.Text, dispo);
+                Glossaire.Instance.GetDatas(GridView, "matricule,nom,postnom,prenom,tel,email,adresse,solde", "agent");
+                initial();
+                TxtMatricule.Text = getMatr();
+                LblDispo.Text = "00";
+            }             
             
         }
 
@@ -106,14 +119,23 @@ namespace EasyToGoBq.Forms
 
         private void GridView_DoubleClick_1(object sender, EventArgs e)
         {
-            TxtMatricule.Text = GridView.SelectedRows[0].Cells["matricule"].Value.ToString();
-            TxtPostnom.Text = GridView.SelectedRows[0].Cells["postnom"].Value.ToString();
-            TxtNom.Text = GridView.SelectedRows[0].Cells["nom"].Value.ToString();
-            TxtPrenom.Text = GridView.SelectedRows[0].Cells["prenom"].Value.ToString();
-            TxtAdresse.Text = GridView.SelectedRows[0].Cells["adresse"].Value.ToString();
-            TxtTel.Text = GridView.SelectedRows[0].Cells["tel"].Value.ToString();
-            TxtEmail.Text = GridView.SelectedRows[0].Cells["email"].Value.ToString();
-            TxtSolde.Text = GridView.SelectedRows[0].Cells["solde"].Value.ToString();
+            try
+            {
+                TxtMatricule.Text = GridView.SelectedRows[0].Cells["matricule"].Value.ToString();
+                TxtPostnom.Text = GridView.SelectedRows[0].Cells["postnom"].Value.ToString();
+                TxtNom.Text = GridView.SelectedRows[0].Cells["nom"].Value.ToString();
+                TxtPrenom.Text = GridView.SelectedRows[0].Cells["prenom"].Value.ToString();
+                TxtAdresse.Text = GridView.SelectedRows[0].Cells["adresse"].Value.ToString();
+                TxtTel.Text = GridView.SelectedRows[0].Cells["tel"].Value.ToString();
+                LblDispo.Text = GridView.SelectedRows[0].Cells["solde"].Value.ToString();
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Erreur lors de chargement des donnés '" + ex.Message + "'");
+            }
+           
+            //TxtSolde.Text = GridView.SelectedRows[0].Cells["solde"].Value.ToString();
         }
 
     }

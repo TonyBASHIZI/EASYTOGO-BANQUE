@@ -88,29 +88,7 @@ namespace EasyToGoBq.Forms
                
             }
         }
-       
-
-        private void LblDashbord_MouseLeave(object sender, EventArgs e)
-        {
-            switch (((Control)sender).Name.Substring(3))
-            {
-                case "Dashbord":
-                    LblDashbord.ForeColor = Color.FromArgb(14, 23, 22);
-                    break;
-
-                case "Report":
-                    LblRecharge.ForeColor = Color.FromArgb(14, 23, 22);
-                    break;
-
-                case "Settings":
-                    LblRecharge.ForeColor = Color.FromArgb(14, 23, 22);
-                    break;
-
-                default:
-                    break;
-            }
-
-        }
+   
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -131,23 +109,8 @@ namespace EasyToGoBq.Forms
 
         private void button3_MouseEnter(object sender, EventArgs e)
         {
-            switch (((Control)sender).Name.Substring(3))
-            {
-                case "Dashbord":
-                    LblDashbord.ForeColor = Color.FromArgb(85, 183, 20);
-                    break;
+            Settings.ForeColor = Color.FromArgb(85, 183, 20);
 
-                case "Report":
-                    LblRecharge.ForeColor = Color.FromArgb(85, 183, 20);
-                    break;
-
-                case "Settings":
-                    LblRecharge.ForeColor = Color.FromArgb(85, 183, 20);
-                    break;
-
-                default:
-                    break;
-            }
         }
 
         private void LblDashbord_Click(object sender, EventArgs e)
@@ -201,6 +164,51 @@ namespace EasyToGoBq.Forms
         {
             //FormProgress re = new FormProgress();
             //re.ShowDialog();
+        }
+
+        private void LblDashbord_MouseLeave(object sender, EventArgs e)
+        {
+            LblDashbord.ForeColor = Color.Black;
+        }
+
+        private void Report_MouseLeave(object sender, EventArgs e)
+        {
+            Report.ForeColor = Color.Black;
+        }
+
+        private void LblRecharge_MouseLeave(object sender, EventArgs e)
+        {
+            LblRecharge.ForeColor = Color.Black;
+        }
+
+        private void Settings_MouseLeave(object sender, EventArgs e)
+        {
+            Settings.ForeColor = Color.Black;
+        }
+
+        private void LblDashbord_MouseLeave_1(object sender, EventArgs e)
+        {
+            LblDashbord.ForeColor = Color.Black;
+        }
+
+        private void LblDashbord_MouseEnter(object sender, EventArgs e)
+        {
+           LblDashbord.ForeColor = Color.FromArgb(85, 183, 20);
+        }
+
+        private void Settings_MouseEnter(object sender, EventArgs e)
+        {
+            Settings.ForeColor = Color.FromArgb(85, 183, 20);
+        }
+
+        private void Report_MouseEnter(object sender, EventArgs e)
+        {
+            Report.ForeColor = Color.FromArgb(85, 183, 20);
+        }
+
+        private void LblRecharge_MouseEnter(object sender, EventArgs e)
+        {
+            LblRecharge.ForeColor = Color.FromArgb(85, 183, 20);
         }
     }
 }

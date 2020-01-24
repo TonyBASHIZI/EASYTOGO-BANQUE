@@ -76,35 +76,37 @@
             this.Settings.FlatAppearance.BorderSize = 0;
             this.Settings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Settings.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Settings.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Settings.Image = ((System.Drawing.Image)(resources.GetObject("Settings.Image")));
             this.Settings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Settings.Location = new System.Drawing.Point(629, 4);
+            this.Settings.Location = new System.Drawing.Point(623, 3);
             this.Settings.Name = "Settings";
             this.Settings.Size = new System.Drawing.Size(167, 45);
             this.Settings.TabIndex = 3;
-            this.Settings.Text = "Paramètre";
+            this.Settings.Text = "PARAMETRE";
             this.Settings.UseVisualStyleBackColor = true;
             this.Settings.Click += new System.EventHandler(this.Settings_Click);
-            this.Settings.MouseEnter += new System.EventHandler(this.button3_MouseEnter);
-            this.Settings.MouseLeave += new System.EventHandler(this.LblDashbord_MouseLeave);
+            this.Settings.MouseEnter += new System.EventHandler(this.Settings_MouseEnter);
+            this.Settings.MouseLeave += new System.EventHandler(this.Settings_MouseLeave);
             // 
             // LblRecharge
             // 
             this.LblRecharge.FlatAppearance.BorderSize = 0;
             this.LblRecharge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LblRecharge.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblRecharge.ForeColor = System.Drawing.Color.Black;
             this.LblRecharge.Image = ((System.Drawing.Image)(resources.GetObject("LblRecharge.Image")));
             this.LblRecharge.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LblRecharge.Location = new System.Drawing.Point(425, 13);
+            this.LblRecharge.Location = new System.Drawing.Point(425, 4);
             this.LblRecharge.Name = "LblRecharge";
-            this.LblRecharge.Size = new System.Drawing.Size(146, 27);
+            this.LblRecharge.Size = new System.Drawing.Size(146, 43);
             this.LblRecharge.TabIndex = 2;
-            this.LblRecharge.Text = "Recharge";
+            this.LblRecharge.Text = "RECHARGE";
             this.LblRecharge.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.LblRecharge.UseVisualStyleBackColor = true;
             this.LblRecharge.Click += new System.EventHandler(this.LblRecharge_Click);
-            this.LblRecharge.MouseEnter += new System.EventHandler(this.button3_MouseEnter);
-            this.LblRecharge.MouseLeave += new System.EventHandler(this.LblDashbord_MouseLeave);
+            this.LblRecharge.MouseEnter += new System.EventHandler(this.LblRecharge_MouseEnter);
+            this.LblRecharge.MouseLeave += new System.EventHandler(this.LblRecharge_MouseLeave);
             // 
             // Report
             // 
@@ -113,15 +115,15 @@
             this.Report.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Report.Image = ((System.Drawing.Image)(resources.GetObject("Report.Image")));
             this.Report.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Report.Location = new System.Drawing.Point(230, 6);
+            this.Report.Location = new System.Drawing.Point(230, 5);
             this.Report.Name = "Report";
             this.Report.Size = new System.Drawing.Size(167, 40);
             this.Report.TabIndex = 1;
-            this.Report.Text = "Document";
+            this.Report.Text = "DOCUMENT";
             this.Report.UseVisualStyleBackColor = true;
             this.Report.Click += new System.EventHandler(this.Report_Click);
-            this.Report.MouseEnter += new System.EventHandler(this.button3_MouseEnter);
-            this.Report.MouseLeave += new System.EventHandler(this.LblDashbord_MouseLeave);
+            this.Report.MouseEnter += new System.EventHandler(this.Report_MouseEnter);
+            this.Report.MouseLeave += new System.EventHandler(this.Report_MouseLeave);
             // 
             // LblDashbord
             // 
@@ -130,16 +132,16 @@
             this.LblDashbord.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblDashbord.Image = ((System.Drawing.Image)(resources.GetObject("LblDashbord.Image")));
             this.LblDashbord.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LblDashbord.Location = new System.Drawing.Point(10, 7);
+            this.LblDashbord.Location = new System.Drawing.Point(10, 6);
             this.LblDashbord.Name = "LblDashbord";
             this.LblDashbord.Size = new System.Drawing.Size(178, 40);
             this.LblDashbord.TabIndex = 0;
-            this.LblDashbord.Text = "Tableau de bord";
+            this.LblDashbord.Text = "TABLEAU DE BORD";
             this.LblDashbord.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.LblDashbord.UseVisualStyleBackColor = true;
             this.LblDashbord.Click += new System.EventHandler(this.LblDashbord_Click);
-            this.LblDashbord.MouseEnter += new System.EventHandler(this.button3_MouseEnter);
-            this.LblDashbord.MouseLeave += new System.EventHandler(this.LblDashbord_MouseLeave);
+            this.LblDashbord.MouseEnter += new System.EventHandler(this.LblDashbord_MouseEnter);
+            this.LblDashbord.MouseLeave += new System.EventHandler(this.LblDashbord_MouseLeave_1);
             // 
             // PnlMain
             // 

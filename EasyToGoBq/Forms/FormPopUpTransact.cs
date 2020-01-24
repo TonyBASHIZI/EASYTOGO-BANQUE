@@ -8,19 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using EasyToGoBq.Classes;
-
 namespace EasyToGoBq.Forms
 {
-    public partial class FormPopUpCompte : Form
+    public partial class FormPopUpTransact : Form
     {
-        public FormPopUpCompte()
+        public FormPopUpTransact()
         {
             InitializeComponent();
         }
 
-        private void FormPopUpCompte_Load(object sender, EventArgs e)
+        private void FormPopUpTransact_Load(object sender, EventArgs e)
         {
-            Glossaire.Instance.GetDatas(dataGridView1, "designation,solde", "compte");
+            Glossaire.Instance.GetDatasTransact(dataGridView1, "*", "detailTransact");
+
         }
     }
 }

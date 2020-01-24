@@ -18,3 +18,25 @@ C:\Users\Thony_PC\Documents\Visual Studio 2013\Projects\EasyToGoBq\EasyToGoBq\ob
 C:\Users\Thony_PC\Documents\Visual Studio 2013\Projects\EasyToGoBq\EasyToGoBq\obj\Debug\EasyToGoBq.Forms.FormProgress.resources
 C:\Users\Thony_PC\Documents\Visual Studio 2013\Projects\EasyToGoBq\EasyToGoBq\obj\Debug\EasyToGoBq.Forms.FormPopUpOperation.resources
 C:\Users\Thony_PC\Documents\Visual Studio 2013\Projects\EasyToGoBq\EasyToGoBq\obj\Debug\EasyToGoBq.Forms.FormPopUpCompte.resources
+D:\BANQUE EASYTOGO\EasyToGoBq\EasyToGoBq\bin\Debug\EasyToGoBq.exe.config
+D:\BANQUE EASYTOGO\EasyToGoBq\EasyToGoBq\obj\Debug\EasyToGoBq.exe
+D:\BANQUE EASYTOGO\EasyToGoBq\EasyToGoBq\obj\Debug\EasyToGoBq.pdb
+D:\BANQUE EASYTOGO\EasyToGoBq\EasyToGoBq\bin\Debug\EasyToGoBq.exe
+D:\BANQUE EASYTOGO\EasyToGoBq\EasyToGoBq\bin\Debug\EasyToGoBq.pdb
+D:\BANQUE EASYTOGO\EasyToGoBq\EasyToGoBq\bin\Debug\MySql.Data.dll
+D:\BANQUE EASYTOGO\EasyToGoBq\EasyToGoBq\obj\Debug\EasyToGoBq.csprojResolveAssemblyReference.cache
+D:\BANQUE EASYTOGO\EasyToGoBq\EasyToGoBq\obj\Debug\EasyToGoBq.Forms.FormLogin.resources
+D:\BANQUE EASYTOGO\EasyToGoBq\EasyToGoBq\obj\Debug\EasyToGoBq.Forms.FormMain.resources
+D:\BANQUE EASYTOGO\EasyToGoBq\EasyToGoBq\obj\Debug\EasyToGoBq.Forms.FormPopUpCompte.resources
+D:\BANQUE EASYTOGO\EasyToGoBq\EasyToGoBq\obj\Debug\EasyToGoBq.Forms.FormPopUpOperation.resources
+D:\BANQUE EASYTOGO\EasyToGoBq\EasyToGoBq\obj\Debug\EasyToGoBq.Forms.FormPopUpTransact.resources
+D:\BANQUE EASYTOGO\EasyToGoBq\EasyToGoBq\obj\Debug\EasyToGoBq.Forms.FormProgress.resources
+D:\BANQUE EASYTOGO\EasyToGoBq\EasyToGoBq\obj\Debug\EasyToGoBq.Forms.FormRecharges.resources
+D:\BANQUE EASYTOGO\EasyToGoBq\EasyToGoBq\obj\Debug\EasyToGoBq.Forms.FormRegister.resources
+D:\BANQUE EASYTOGO\EasyToGoBq\EasyToGoBq\obj\Debug\EasyToGoBq.Forms.FormReport.resources
+D:\BANQUE EASYTOGO\EasyToGoBq\EasyToGoBq\obj\Debug\EasyToGoBq.Forms.Views.UcDashbord.resources
+D:\BANQUE EASYTOGO\EasyToGoBq\EasyToGoBq\obj\Debug\EasyToGoBq.Forms.Views.UcHome.resources
+D:\BANQUE EASYTOGO\EasyToGoBq\EasyToGoBq\obj\Debug\EasyToGoBq.Forms.Views.UcReport.resources
+D:\BANQUE EASYTOGO\EasyToGoBq\EasyToGoBq\obj\Debug\EasyToGoBq.Properties.Resources.resources
+D:\BANQUE EASYTOGO\EasyToGoBq\EasyToGoBq\obj\Debug\EasyToGoBq.csproj.GenerateResource.Cache
+D:\BANQUE EASYTOGO\EasyToGoBq\EasyToGoBq\obj\Debug\EasyToGoBq.Forms.FormPopUpTransco.resources

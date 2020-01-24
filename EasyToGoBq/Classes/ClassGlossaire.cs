@@ -22,12 +22,7 @@ namespace EasyToGoBq.Classes
         MySqlDataReader dr = null;
         MySqlDataAdapter adpr = null;
         DataSet dste;
-        private string server;
-        private string database;
-        private string uid;
-        private string password;
-
-        private string port;
+        
         // private string str, code_isn;
         private static Glossaire _instance = null;
 
@@ -108,14 +103,105 @@ namespace EasyToGoBq.Classes
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Une erreur s'est produite lors du chargement des données. \n\nL'Application va s'arrêter.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Console.WriteLine("Une erreur s'est produite lors de l'opération : " + ex.Message);
-                Application.Exit();
+                MessageBox.Show("Une erreur s'est produite lors du chargement des données.  '"+ex.Message+"'", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //Console.WriteLine("Une erreur s'est produite lors de l'opération : " + ex.Message);
+                //Application.Exit();
                 // MessageBox.Show(ex.Message);
             }
             finally
             {
+                cmd.Dispose();
+                con.Close();
+            }
+        }
+        public void GetDatasTransact(DataGridView grid, string field, string table)
+        {
 
+
+            try
+            {
+                InitializeConnection();
+                using (cmd = con.CreateCommand())
+                {
+                    cmd.CommandText = " SELECT " + field + " FROM " + table +" ";
+                    dt = new MySqlDataAdapter((MySqlCommand)cmd);
+                    DataSet ds = new DataSet();
+                    dt.Fill(ds);
+                    grid.DataSource = ds.Tables[0];
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Une erreur s'est produite lors du chargement des données.  '" + ex.Message + "'", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //Console.WriteLine("Une erreur s'est produite lors de l'opération : " + ex.Message);
+                //Application.Exit();
+                // MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                cmd.Dispose();
+                con.Close();
+            }
+        }
+        public void GetDataCompagnie(DataGridView grid, string field, string table, string compagnie)
+        {
+            try
+            {
+                InitializeConnection();
+                using (cmd = con.CreateCommand())
+                {
+                    cmd.CommandText = " SELECT " + field + " FROM " + table + " WHERE COMPAGNIE = '"+compagnie+"'";
+                    dt = new MySqlDataAdapter((MySqlCommand)cmd);
+                    DataSet ds = new DataSet();
+                    dt.Fill(ds);
+                    grid.DataSource = ds.Tables[0];
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Une erreur s'est produite lors du chargement des données.  '" + ex.Message + "'", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //Console.WriteLine("Une erreur s'est produite lors de l'opération : " + ex.Message);
+                //Application.Exit();
+                // MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                cmd.Dispose();
+                con.Close();
+            }
+        }
+        public void DetailTransact(Label LbNbOper, Label LbNbBus, Label LbTotal, string compagnie)
+        {
+            try
+            {
+                InitializeConnection();
+
+                string q = "SELECT SUM(NOMBRE_OPE) as Total_Operation,COUNT(BUS) as Total_BUS,SUM(TOTAL) as TOTAL_PAIE FROM filtreTransact WHERE COMPAGNIE ='"+compagnie+"'  ";
+                cmd = new MySqlCommand(q, con);
+                dr = cmd.ExecuteReader();
+
+                if(dr.Read())
+                {
+                    LbNbOper.Text = dr.GetString("Total_Operation");
+                    LbNbBus.Text = dr.GetString("Total_BUS");
+                    LbTotal.Text = getAgence(compagnie);
+
+                }
+                else
+                {
+                    LbNbOper.Text = "00";
+                    LbNbBus.Text = "00";
+                    LbTotal.Text = "00";
+
+                }
+
+
+            }
+            catch(Exception ex)
+            {
+                //MessageBox.Show("Une erreur s'est produite lors du chargement des données.  '" + ex.Message + "'", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //Console.WriteLine("Une erreur s'est produite lors de l'opération : " + ex.Message);
+                //Application.Exit();
             }
         }
 
@@ -396,8 +482,8 @@ namespace EasyToGoBq.Classes
             {
                 if (user.Id == 0)
                 {
-                    cmd.CommandText = "UPDATE `easy_to_go`.`banque` SET `mot_de_passe` = @password " +
-                        " WHERE `id` = @idUser; ";
+                    cmd.CommandText = "UPDATE banque SET mot_de_passe = @password " +
+                        " WHERE id = @idUser; ";
 
                     SetParameter(cmd, "@idUser", DbType.Int32, 10, User.Instance.IdSession);
                     SetParameter(cmd, "@password", DbType.String, 255, user.Password);
@@ -450,6 +536,10 @@ namespace EasyToGoBq.Classes
             }
             catch (Exception ex)
             {
+           
+                MessageBox.Show("Une erreur s'est produite lors du chargement des données Application va s'arreter", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine("Une erreur s'est produite lors de l'opération : Application va s'arreter ");
+                Application.Exit();
                 //MessageBox.Show(ex.Message);
             }
             finally
@@ -541,7 +631,7 @@ namespace EasyToGoBq.Classes
             return c;
         }
 
-        public void Recharge(string code, string montant)
+        public void Recharge(string code, int montant)
         {
 
             

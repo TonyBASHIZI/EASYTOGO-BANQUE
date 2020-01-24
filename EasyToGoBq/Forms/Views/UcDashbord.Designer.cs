@@ -147,6 +147,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.LblOperation);
@@ -204,6 +205,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Peru;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.pictureBox3);
             this.panel3.Controls.Add(this.LblCompte);
@@ -260,6 +262,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.pictureBox4);
             this.panel4.Controls.Add(this.LblTranct);
@@ -268,6 +271,7 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(256, 149);
             this.panel4.TabIndex = 3;
+            this.panel4.Click += new System.EventHandler(this.panel4_Click);
             // 
             // label7
             // 
@@ -315,6 +319,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.label9);
             this.panel5.Controls.Add(this.pictureBox5);
             this.panel5.Controls.Add(this.LblCommission);
@@ -370,6 +375,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.pictureBox6);
             this.panel6.Controls.Add(this.LblTransco);
             this.panel6.Controls.Add(this.label12);
@@ -377,6 +383,8 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(455, 103);
             this.panel6.TabIndex = 5;
+            this.panel6.Click += new System.EventHandler(this.panel6_Click);
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // pictureBox6
             // 
@@ -413,6 +421,7 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.Green;
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel7.Controls.Add(this.pictureBox7);
             this.panel7.Controls.Add(this.LblTranskin);
             this.panel7.Controls.Add(this.label14);
@@ -420,6 +429,8 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(438, 103);
             this.panel7.TabIndex = 6;
+            this.panel7.Click += new System.EventHandler(this.panel7_Click);
+            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // pictureBox7
             // 
@@ -456,6 +467,7 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.Peru;
+            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel8.Controls.Add(this.pictureBox8);
             this.panel8.Controls.Add(this.LblEsprit);
             this.panel8.Controls.Add(this.lb);
@@ -463,6 +475,7 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(455, 103);
             this.panel8.TabIndex = 7;
+            this.panel8.Click += new System.EventHandler(this.panel8_Click);
             // 
             // pictureBox8
             // 

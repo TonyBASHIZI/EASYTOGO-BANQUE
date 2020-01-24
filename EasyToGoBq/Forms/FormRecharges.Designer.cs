@@ -28,14 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRecharges));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.TxtSolde = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.TxtEmail = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.TxtTel = new System.Windows.Forms.TextBox();
@@ -58,19 +56,28 @@
             this.GridView = new System.Windows.Forms.DataGridView();
             this.TxtRecherche = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.LblDispo = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
+            this.bindingNavigator1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.LblDispo);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.panel8);
             this.groupBox1.Controls.Add(this.TxtSolde);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.panel7);
-            this.groupBox1.Controls.Add(this.TxtEmail);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.panel6);
             this.groupBox1.Controls.Add(this.TxtTel);
@@ -100,7 +107,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(343, 156);
+            this.label8.Location = new System.Drawing.Point(339, 125);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(73, 13);
             this.label8.TabIndex = 23;
@@ -109,7 +116,7 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel8.Location = new System.Drawing.Point(418, 172);
+            this.panel8.Location = new System.Drawing.Point(418, 141);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(200, 2);
             this.panel8.TabIndex = 22;
@@ -118,44 +125,17 @@
             // 
             this.TxtSolde.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtSolde.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtSolde.Location = new System.Drawing.Point(417, 154);
+            this.TxtSolde.Location = new System.Drawing.Point(418, 122);
             this.TxtSolde.Name = "TxtSolde";
             this.TxtSolde.Size = new System.Drawing.Size(200, 16);
             this.TxtSolde.TabIndex = 21;
             this.TxtSolde.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TxtSolde.TextChanged += new System.EventHandler(this.TxtSolde_TextChanged);
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(352, 121);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(38, 13);
-            this.label7.TabIndex = 20;
-            this.label7.Text = "Email :";
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel7.Location = new System.Drawing.Point(416, 137);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(200, 2);
-            this.panel7.TabIndex = 19;
-            // 
-            // TxtEmail
-            // 
-            this.TxtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtEmail.Location = new System.Drawing.Point(415, 119);
-            this.TxtEmail.Name = "TxtEmail";
-            this.TxtEmail.Size = new System.Drawing.Size(200, 16);
-            this.TxtEmail.TabIndex = 18;
-            this.TxtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(350, 86);
+            this.label6.Location = new System.Drawing.Point(340, 86);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 13);
             this.label6.TabIndex = 17;
@@ -182,7 +162,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(352, 45);
+            this.label5.Location = new System.Drawing.Point(342, 45);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 13);
             this.label5.TabIndex = 14;
@@ -360,12 +340,87 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
+            // LblDispo
+            // 
+            this.LblDispo.AutoSize = true;
+            this.LblDispo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDispo.Location = new System.Drawing.Point(574, 160);
+            this.LblDispo.Name = "LblDispo";
+            this.LblDispo.Size = new System.Drawing.Size(24, 18);
+            this.LblDispo.TabIndex = 24;
+            this.LblDispo.Text = "00";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(459, 155);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(105, 13);
+            this.label9.TabIndex = 25;
+            this.label9.Text = "Montant disponible  :";
+            // 
+            // bindingNavigator1
+            // 
+            this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.bindingNavigator1.CountItem = null;
+            this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorSeparator2,
+            this.bindingNavigatorAddNewItem,
+            this.bindingNavigatorDeleteItem});
+            this.bindingNavigator1.Location = new System.Drawing.Point(0, 0);
+            this.bindingNavigator1.MoveFirstItem = null;
+            this.bindingNavigator1.MoveLastItem = null;
+            this.bindingNavigator1.MoveNextItem = null;
+            this.bindingNavigator1.MovePreviousItem = null;
+            this.bindingNavigator1.Name = "bindingNavigator1";
+            this.bindingNavigator1.PositionItem = null;
+            this.bindingNavigator1.Size = new System.Drawing.Size(689, 25);
+            this.bindingNavigator1.TabIndex = 5;
+            this.bindingNavigator1.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorSeparator
+            // 
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
+            // 
             // FormRecharges
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(689, 437);
+            this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.TxtRecherche);
             this.Controls.Add(this.GridView);
@@ -381,6 +436,9 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
+            this.bindingNavigator1.ResumeLayout(false);
+            this.bindingNavigator1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -392,9 +450,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.TextBox TxtSolde;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TextBox TxtEmail;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TextBox TxtTel;
@@ -417,5 +472,13 @@
         private System.Windows.Forms.DataGridView GridView;
         private System.Windows.Forms.TextBox TxtRecherche;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label LblDispo;
+        private System.Windows.Forms.BindingNavigator bindingNavigator1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
     }
 }

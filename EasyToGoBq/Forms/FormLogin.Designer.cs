@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.TxtUsername = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.TxtPassword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.TxtUsername = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.LblError = new System.Windows.Forms.Label();
             this.btnConnecter = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -58,35 +58,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Authentification";
             // 
-            // pictureBox1
+            // panel2
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(110, 34);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(194, 104);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.Location = new System.Drawing.Point(154, 56);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(209, 2);
+            this.panel2.TabIndex = 5;
             // 
-            // label1
+            // panel1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(10, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nom d\'utilisateur :";
-            // 
-            // TxtUsername
-            // 
-            this.TxtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtUsername.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtUsername.Location = new System.Drawing.Point(154, 34);
-            this.TxtUsername.Name = "TxtUsername";
-            this.TxtUsername.Size = new System.Drawing.Size(209, 19);
-            this.TxtUsername.TabIndex = 1;
-            this.TxtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Location = new System.Drawing.Point(153, 98);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(209, 2);
+            this.panel1.TabIndex = 4;
             // 
             // TxtPassword
             // 
@@ -109,21 +95,35 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Mot de passe :";
             // 
-            // panel1
+            // TxtUsername
             // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(153, 98);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(209, 2);
-            this.panel1.TabIndex = 4;
+            this.TxtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtUsername.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtUsername.Location = new System.Drawing.Point(154, 34);
+            this.TxtUsername.Name = "TxtUsername";
+            this.TxtUsername.Size = new System.Drawing.Size(209, 19);
+            this.TxtUsername.TabIndex = 1;
+            this.TxtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // panel2
+            // label1
             // 
-            this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.Location = new System.Drawing.Point(154, 56);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(209, 2);
-            this.panel2.TabIndex = 5;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(10, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(136, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Nom d\'utilisateur :";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(110, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(194, 126);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // LblError
             // 
@@ -138,7 +138,7 @@
             this.btnConnecter.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.btnConnecter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConnecter.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConnecter.Location = new System.Drawing.Point(100, 278);
+            this.btnConnecter.Location = new System.Drawing.Point(110, 278);
             this.btnConnecter.Name = "btnConnecter";
             this.btnConnecter.Size = new System.Drawing.Size(184, 30);
             this.btnConnecter.TabIndex = 3;
